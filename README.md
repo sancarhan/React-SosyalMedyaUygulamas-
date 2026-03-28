@@ -3,7 +3,6 @@
 [![React](https://img.shields.io/badge/React-19-blue?logo=react)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-5-green?logo=vite)](https://vite.dev/)
 
-
 ## 📖 Proje Tanımı
 Bu proje, modern bir **sosyal medya web uygulaması**dır. Kullanıcıların post paylaşabileceği, beğeni atabileceği, yorum yapabileceği ve arkadaşlarıyla etkileşimde bulunabileceği bir platform geliştiriyoruz.
 
@@ -53,10 +52,21 @@ client/
 │   ├── favicon.svg
 │   └── icons.svg
 ├── src/             # Kaynak kodlar
-│   ├── App.jsx      # Ana uygulama
-│   ├── main.jsx     # Entry point
-│   ├── App.css      # Global stiller
-│   └── assets/      # Görseller
+│   ├── App.jsx          # Ana uygulama
+│   ├── main.jsx         # Entry point
+│   ├── index.css        # Global stiller
+│   ├── components/      # Yeniden kullanılabilir bileşenler
+│   ├── pages/           # Sayfa bileşenleri
+│   │   ├── ChatBox.jsx
+│   │   ├── Connections.jsx
+│   │   ├── CreatePost.jsx
+│   │   ├── Discover.jsx
+│   │   ├── Feed.jsx
+│   │   ├── Layout.jsx
+│   │   ├── Login.jsx
+│   │   ├── Messages.jsx
+│   │   └── Profile.jsx
+│   └── assets/          # Görseller
 ├── package.json     # Bağımlılıklar
 ├── vite.config.js   # Vite konfigürasyonu
 └── README.md        # Bu dosya!
