@@ -18,11 +18,11 @@ export const assets = {
 }
 
 export const menuItemsData = [
-    { to: '/', label: 'Feed', Icon: Home },
-    { to: '/messages', label: 'Messages', Icon: MessageCircle },
-    { to: '/connections', label: 'Connections', Icon: Users },
-    { to: '/discover', label: 'Discover', Icon: Search },
-    { to: '/profile', label: 'Profile', Icon: UserIcon },
+    { to: '/', label: 'Akış', Icon: Home },
+    { to: '/messages', label: 'Mesajlar', Icon: MessageCircle },
+    { to: '/connections', label: 'Takip İstekler', Icon: Users },
+    { to: '/discover', label: 'Keşfet', Icon: Search },
+    { to: '/profile', label: 'Profil', Icon: UserIcon },
 ];
 
 export const dummyUserData = {
