@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { dummyStoriesData } from '../assets/assets'
 import { Plus } from 'lucide-react'
+import moment from 'moment'
+import "moment/locale/tr";
 
 const StoriesBar = () => {
 
@@ -29,9 +31,26 @@ const StoriesBar = () => {
          </div>
          <p className='text-sm font-medium text-slate-700 text-center'>Hikaye Paylaş</p>
         </div>
-
        </div>
        {/* Hikaye kart */}
+       {
+        stories.map((story, index)=> (
+         <div key={index} className={`relative rounded-lg shadow
+         min-w-30 max-w-30 max-h-40 cursor-pointer hover:shadow-lg
+         transition-all duration-200 bg-gradient-to-b from-indigo-500 to-purple-600 hover:from-indigo-700
+         hover:to-purple-800 active:scale-95`}>
+          <img src={story.user.profile_picture} alt="" className='absolute
+          size-8 top-3 left-3 z-10 rounded-full ring ring-gray-100 shadow'/>
+          <p className='absolute top-18 left-3 text-white/60 text-sm
+           truncate max-w-24'>{story.content}</p>
+           <p className='text-white absolute bottom-1 right-2 z-10 
+           text-xs'>{moment(story.createdAt).locale("tr").fromNow()}</p>
+           {
+            
+           }
+         </div>
+        ))
+       }
       </div>
 
     </div>
