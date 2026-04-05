@@ -3,10 +3,13 @@ import { dummyStoriesData } from '../assets/assets'
 import { Plus } from 'lucide-react'
 import moment from 'moment'
 import "moment/locale/tr";
+import StoryModel from './StoryModel';
 
 const StoriesBar = () => {
 
  const [stories, setStories] = useState([])
+ const [showModal, setShowModal] = useState(false)
+ const [viewStory, setViewStory] = useState(null)
 
  const fetchStories = async () => {
   setStories(dummyStoriesData)
@@ -21,7 +24,7 @@ const StoriesBar = () => {
       
       <div className='flex gap-4 pb-5'>
        {/* Hikaye Kartı Ekle */}
-       <div className='rounded-lg shadow-sm min-w-30 max-w-30 max-h-40 
+       <div onClick={()=> setShowModal(true)} className='rounded-lg shadow-sm min-w-30 max-w-30 max-h-40 
        aspect-[3/4] cursor-pointer hover:shadow-lg transition-all duration-200 border-2 border-dashed
        border-indigo-300 bg-gradient-to-b from-indigo-50 to-white'>
 
@@ -64,6 +67,9 @@ const StoriesBar = () => {
         ))
        }
       </div>
+
+      {/* Hikaye modeli ekle */}
+      {showModal && <StoryModel  setShowModal={setShowModal} fetchStories={fetchStories}/>}
 
     </div>
   )
