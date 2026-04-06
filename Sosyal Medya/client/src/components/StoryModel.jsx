@@ -1,4 +1,4 @@
-import { ArrowLeft, TextIcon, Upload } from 'lucide-react'
+import { ArrowLeft, Sparkle, TextIcon, Upload } from 'lucide-react'
 import React, { useState } from 'react'
 
 const StoryModel = ({setShowModal, fetchStories}) => {
@@ -71,7 +71,10 @@ const StoryModel = ({setShowModal, fetchStories}) => {
           <Upload size={18}/>Fotoğraf/Video
         </label>
        </div>
-
+       <button className='flex items-center justify-center gap-2 text-white py-3 mt-4 w-full rounded bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700
+       active:scale-95 transition cursor-pointer'>
+        <Sparkle size={18}/> Hikaye Oluştur
+       </button>
       </div>
     </div>
   )
