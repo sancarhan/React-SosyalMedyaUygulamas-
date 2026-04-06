@@ -1,4 +1,4 @@
-import { ArrowLeft } from 'lucide-react'
+import { ArrowLeft, TextIcon, Upload } from 'lucide-react'
 import React, { useState } from 'react'
 
 const StoryModel = ({setShowModal, fetchStories}) => {
@@ -12,7 +12,7 @@ const StoryModel = ({setShowModal, fetchStories}) => {
  const [previewUrl, setPreviewUrl] = useState(null)
 
  const handleMediaUpload = (e) =>{
-  const file = e.target.filse?.[0]
+  const file = e.target.files?.[0]
   if(file){
    setMedia(file)
    setPreviewUrl(URL.createObjectURL(file))
@@ -33,6 +33,45 @@ const StoryModel = ({setShowModal, fetchStories}) => {
         <h2 className='text-lg font-semibold'>Hikaye Oluştur</h2>
         <span className='w-10'></span>
        </div>
+
+       <div className='rounded-lg h-96 flex items-center justify-center relative' style={{backgroundColor: background}}>
+        
+        {mode === 'text' && (
+          <textarea className='bg-transparent text-white w-full h-full p-6 text-lg resize-none focus:outline-none ' placeholder='Aklınızdan ne geçiyor?'
+           onChange={(e)=>setText(e.target.value)} value={text}/>
+
+        )}
+
+        {
+         mode === 'media' && previewUrl && (
+          media?.type.startsWith('image') ? (
+            <img src={previewUrl} className='object-contain max-h-full' alt="" />
+          ) : (
+            <video src={previewUrl} className='object-contain max-h-full'/>
+          )
+         )
+        }
+
+       </div>
+
+       <div className='flex mt-4 gap-2'>
+        {bgColors.map((color)=>(
+          <button key={color} className='w-6 h-6 rounded-full ring cursor-pointer' style={{backgroundColor: color}} onClick={()=>setBackground(color)}/>
+        ))} 
+       </div>
+
+       <div className='flex gap-2 mt-4'>
+        <button onClick={()=> {setMode('text'); setMedia(null); setPreviewUrl(null)}} className={`flex-1 flex items-center justify-center cursor-pointer gap-2 p-2 rounded ${mode === 'text' ? "bg-white text-black" :
+          "bg-zinc-800"
+        }`}>
+          <TextIcon size={18}/> Text
+        </button>
+        <label className={`flex-1 flex items-center justify-center gap-2 p-2 rounded cursor-pointer ${mode === 'media' ? "bg-white text-black" : "bg-zinc-800"}`}>
+          <input onChange={(e)=> {handleMediaUpload(e); setMode('media')}} type="file" accept='image/*, video/*' className='hidden'/>
+          <Upload size={18}/>Fotoğraf/Video
+        </label>
+       </div>
+
       </div>
     </div>
   )
