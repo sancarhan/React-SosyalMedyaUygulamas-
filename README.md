@@ -4,7 +4,7 @@
 [![Vite](https://img.shields.io/badge/Vite-5-green?logo=vite)](https://vite.dev/)
 
 
-sdfsdfsdf
+
 ## 📖 Proje Tanımı
 Bu proje, modern bir **sosyal medya web uygulaması**dır. Kullanıcıların post paylaşabileceği, beğeni atabileceği, yorum yapabileceği ve arkadaşlarıyla etkileşimde bulunabileceği bir platform geliştiriyoruz.
 
