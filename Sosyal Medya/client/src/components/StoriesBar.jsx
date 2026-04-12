@@ -18,8 +18,6 @@ const StoriesBar = () => {
  }
  
 
- const;
-
  useEffect(() => {
   fetchStories()
  }, [])
