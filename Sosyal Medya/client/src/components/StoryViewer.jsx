@@ -66,7 +66,7 @@ const StoryViewer = ({viewStory, setViewStory}) => {
     }
   }
 
-  const
+ 
 
   return (
     <div className='fixed inset-0 h-screen bg-black bg-opacity-90 z-110 flex items-center justify-center'
