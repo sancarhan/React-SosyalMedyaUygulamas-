@@ -17,6 +17,9 @@ const StoriesBar = () => {
   setStories(dummyStoriesData)
  }
  
+
+ const;
+
  useEffect(() => {
   fetchStories()
  }, [])
