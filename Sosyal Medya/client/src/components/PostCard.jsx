@@ -18,6 +18,7 @@ const PostCard = ({post}) => {
         </div>
        </div>
       </div>
+      {/* İçerik */}
     </div>
   )
 }
