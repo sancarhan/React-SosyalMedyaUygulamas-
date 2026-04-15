@@ -1,11 +1,19 @@
-import { BadgeCheck } from 'lucide-react'
-import React from 'react'
+import { BadgeCheck, Heart, MessageCircle, Share2 } from 'lucide-react'
+import React, { useState } from 'react'
 import moment from 'moment'
+import {dummyUserData} from '../assets/assets'
 
 const PostCard = ({post}) => {
 
 
   const postWithHashtags =  post.content.replace(/(#\w+)/g, '<span class="text-indigo-600">$1</span>')
+  const [likes, setLikes] = useState(post.likes_count)
+  const currentUser = dummyUserData
+
+
+  const handleLike = async (params) => {
+    
+  }
 
   return (
     <div className='bg-white rounded-xl shadow p-4 space-y-4 w-full max-w-2xl'>
@@ -37,6 +45,30 @@ const PostCard = ({post}) => {
             ${post.image_urls.length === 1 && 'col-span-2 h-auto'}`} alt="" />
         ))}
       </div>
+
+      {/* Beğeni, Yorum, Paylaşım */}
+      <div className='flex items-center gap-4 text-gray-600 
+      text-sm pt-2 border-t border-gray-300'>
+        <div className='flex items-center gap-1'>
+          <Heart className={`w-4 h-4 cursor-pointer ${likes.includes(currentUser._id) &&
+           'text-red-500 fill-red-500'}`}
+          onClick={handleLike}/>
+          <span>{likes.length}</span>
+        </div>
+
+        <div className='flex items-center gap-1'>
+          <MessageCircle className='w-4 h-4'/>
+          <span>{12}</span>
+        </div>
+
+        <div className='flex items-center gap-1'>
+          <Share2 className='w-4 h-4'/>
+          <span>{7}</span>
+        </div>
+
+      </div>
+
+
     </div>
   )
 }
