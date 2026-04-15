@@ -19,6 +19,12 @@ const PostCard = ({post}) => {
        </div>
       </div>
       {/* İçerik */}
+      {post.content && 
+
+      <div className='text-gray-800 text-sm whitespace-pre-line' dangerouslySetInnerHTML={{__html: post.content}}/>
+
+      
+      }
     </div>
   )
 }
