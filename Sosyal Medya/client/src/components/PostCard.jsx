@@ -3,6 +3,10 @@ import React from 'react'
 import moment from 'moment'
 
 const PostCard = ({post}) => {
+
+
+  const postWithHashtags =  post.content.replace(/(#\w+)/g, '<span class="text-indigo-600">$1</span>')
+
   return (
     <div className='bg-white rounded-xl shadow p-4 space-y-4 w-full max-w-2xl'>
       {/* Kullanıcı bilgisi */}
@@ -21,7 +25,7 @@ const PostCard = ({post}) => {
       {/* İçerik */}
       {post.content && 
 
-      <div className='text-gray-800 text-sm whitespace-pre-line' dangerouslySetInnerHTML={{__html: post.content}}/>
+      <div className='text-gray-800 text-sm whitespace-pre-line' dangerouslySetInnerHTML={{__html: postWithHashtags}}/>
 
       
       }
