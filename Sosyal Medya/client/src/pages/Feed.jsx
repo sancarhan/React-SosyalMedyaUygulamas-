@@ -35,7 +35,7 @@ const Feed = () => {
       {/* sağ sidebar */}
       <div>
         <div>
-          Sponsorlu
+         
         </div>
         <h1>Son mesajlar</h1>
       </div>
