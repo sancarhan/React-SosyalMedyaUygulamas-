@@ -37,7 +37,7 @@ const Feed = () => {
         <div>
          
         </div>
-        <h1>Son mesajlar</h1>
+        
       </div>
     </div>
   ) : <Loading />
