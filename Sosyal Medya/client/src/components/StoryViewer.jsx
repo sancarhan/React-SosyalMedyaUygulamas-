@@ -25,6 +25,7 @@ const StoryViewer = ({viewStory, setViewStory}) => {
 
       timer = setTimeout (()=>{
         setViewStory(null)
+        return;
       }, duration)
 
     }
@@ -65,6 +66,7 @@ const StoryViewer = ({viewStory, setViewStory}) => {
         return null;
     }
   }
+
 
   return (
     <div className='fixed inset-0 h-screen bg-black bg-opacity-90 z-110 flex items-center justify-center'
