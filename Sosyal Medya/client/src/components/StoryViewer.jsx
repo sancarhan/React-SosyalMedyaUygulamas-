@@ -25,7 +25,6 @@ const StoryViewer = ({viewStory, setViewStory}) => {
 
       timer = setTimeout (()=>{
         setViewStory(null)
-        return;
       }, duration)
 
     }
