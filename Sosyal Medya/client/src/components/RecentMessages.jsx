@@ -27,10 +27,13 @@ const RecentMessages = () => {
               className="w-8 h-8 rounded-full"
               alt=""
             />
-            <div>
+            <div className="w-full">
+              <div className="flex justify-between">
+                <p className="font-medium">{message.from_user_id.full_name}</p>
+                <p className="text-[10px] text-slate-400">{moment(message.createdAt).fromNow()}</p>
+              </div>
               <div>
-                <p>{message.from_user_id.full_name}</p>
-                <p>{moment(message.createdAt).fromNow()}</p>
+               <p>{message.text ? message.text : 'Media'}</p>
               </div>
             </div>
           </Link>
