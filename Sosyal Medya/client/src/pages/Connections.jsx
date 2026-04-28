@@ -40,6 +40,9 @@ const Connections = () => {
         </div>
 
         {/* sayaç */}
+        <div>
+          
+        </div>
 
       </div>
     </div>
