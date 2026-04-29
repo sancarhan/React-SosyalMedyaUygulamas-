@@ -164,10 +164,10 @@ http://localhost:5173
 - [x] Gönderi kartı (beğenme, yorum, paylaşım UI)
 - [x] Son mesajlar bileşeni
 - [x] Mesajlar sayfası (bağlantı listesi)
+- [ ] Bağlantılar (takip istekleri) sayfası - geliştiriliyor
 - [ ] ChatBox (sohbet ekranı) - geliştiriliyor
 - [ ] Profil sayfası - geliştiriliyor
 - [ ] Keşfet sayfası - geliştiriliyor
-- [ ] Bağlantılar (takip istekleri) sayfası - geliştiriliyor
 - [ ] Gönderi oluşturma sayfası - geliştiriliyor
 - [ ] Backend entegrasyonu (şu an sahte veriler kullanılıyor)
 
