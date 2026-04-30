@@ -16,8 +16,6 @@ import {
 
 const Connections = () => {
   const navigate = useNavigate();
- const;
-
   const dataArray = [
     { label: "Takipçiler", value: followers, icon: Users },
     { label: "Takip ettiklerin", value: following, icon: UserCheck },
