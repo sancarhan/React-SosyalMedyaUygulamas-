@@ -6,6 +6,7 @@ import moment from "moment";
 const RecentMessages = () => {
   const [messages, setMessages] = useState([]);
 
+  
   const fetchRecentMessages = async () => {
     setMessages(dummyRecentMessagesData);
   };
