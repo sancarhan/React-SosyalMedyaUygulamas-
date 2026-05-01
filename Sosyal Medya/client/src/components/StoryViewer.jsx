@@ -14,6 +14,7 @@ const StoryViewer = ({viewStory, setViewStory}) => {
 
       const duration = 10000;
       const setTime = 100;
+      
       let elapsed = 0;
 
       progressInterval = setInterval(() => {
