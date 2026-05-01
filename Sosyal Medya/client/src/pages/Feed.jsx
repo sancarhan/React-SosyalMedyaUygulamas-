@@ -8,6 +8,7 @@ import RecentMessages from '../components/RecentMessages'
 const Feed = () => {
 
   const [feeds, setfeeds] = useState([])
+  
   const [loading, setLoading] = useState(true)
 
 
