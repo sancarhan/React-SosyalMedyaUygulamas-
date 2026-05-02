@@ -82,13 +82,38 @@ const Connections = () => {
                 <p className="text-sm text-gray-600">{user.bio.slice(0, 40)}...</p>
                 <div className="felx max-sm:flex-col gap-2 mt-4">
                   {
-                    <button className="w-full p-2 text-sm rounded bg-gradient-to-r
+                    <button onClick={()=> navigate(`/profile/${user._id}`)} className="w-full p-2 text-sm rounded bg-gradient-to-r
                     from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700
                     active:scale-95 transition text-white cursor-pointer">
                       Profili Görüntüle
                     </button>
                   }
-
+                  {
+                    currentTab === 'Takipçiler' && (
+                      <button className="w-full p-2 text-sm rounded bg-slate-100
+                      hover:bg-slate-200 text-black active:scale-95 transition cursor-pointer">
+                        Takibi bırak
+                      </button>
+                    )
+                  }
+                  {
+                    currentTab === 'Bekleyen İstekler' && (
+                      <button className="w-full p-2 text-sm rounded bg-slate-100
+                      hover:bg-slate-200 text-black active:scale-95 transition cursor-pointer">
+                        Kabul Et
+                      </button>
+                    )
+                  }
+                  {
+                    currentTab === 'Bağlantılar' && (
+                      <button onClick={()=>navigate('/messages/${user._id}')} className="w-full p-2 text-sm rounded bg-slate-100
+                      hover:bg-slate-200 text-black active:scale-95 transition cursor-pointer
+                      flex items-center justify-center gap-1">
+                        <MessageSquare className="w-4 h-4"/>
+                        Mesaj Gönder
+                      </button>
+                    )
+                  }
                 </div>
               </div>
             </div>
