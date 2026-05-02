@@ -6,7 +6,7 @@ import {
   UserRoundPen,
   MessageSquare,
 } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { data, useNavigate } from "react-router-dom";
 import {
   dummyConnectionsData as connections,
   dummyFollowersData as followers,
@@ -69,6 +69,17 @@ const Connections = () => {
             ))
           }
         </div>
+
+        {/* Bağlantılar */}
+        <div className="flex flex-wrap gap-6 mt-6">
+          {dataArray.find((item)=>item.label === currentTab).value.map((user)=>(
+            <div key={user._id} className="w-full max-w-88 flex gap-5 p-6 bg-white
+            shadow rounded-md">
+              <img src={user.profile_picture} alt="" />
+            </div>
+          ))}
+        </div>
+
       </div>
     </div>
   );
