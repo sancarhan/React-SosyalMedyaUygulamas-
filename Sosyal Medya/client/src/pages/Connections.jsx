@@ -90,7 +90,7 @@ const Connections = () => {
                   }
                   {
                     currentTab === 'Takipçiler' && (
-                      <button className="w-full p-2 text-sm rounded bg-slate-100
+                      <button className="w-full p-2 text-sm rounded bg-slate-100 mt-1
                       hover:bg-slate-200 text-black active:scale-95 transition cursor-pointer">
                         Takibi bırak
                       </button>
@@ -98,7 +98,7 @@ const Connections = () => {
                   }
                   {
                     currentTab === 'Bekleyen İstekler' && (
-                      <button className="w-full p-2 text-sm rounded bg-slate-100
+                      <button className="w-full p-2 text-sm rounded bg-slate-100 mt-1
                       hover:bg-slate-200 text-black active:scale-95 transition cursor-pointer">
                         Kabul Et
                       </button>
@@ -106,7 +106,7 @@ const Connections = () => {
                   }
                   {
                     currentTab === 'Bağlantılar' && (
-                      <button onClick={()=>navigate('/messages/${user._id}')} className="w-full p-2 text-sm rounded bg-slate-100
+                      <button onClick={()=>navigate('/messages/${user._id}')} className="w-full p-2 text-sm rounded bg-slate-100 mt-1
                       hover:bg-slate-200 text-black active:scale-95 transition cursor-pointer
                       flex items-center justify-center gap-1">
                         <MessageSquare className="w-4 h-4"/>
