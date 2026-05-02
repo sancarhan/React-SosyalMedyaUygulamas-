@@ -55,7 +55,7 @@ const Connections = () => {
         rounded-md p-1 bg-white shadow-sm">
           {
             dataArray.map((tab)=>(
-              <button onClick={()=>setCurrentTab(tab.label)} key={tab.label} className={`flex items-center px-3 py-1 
+              <button onClick={()=>setCurrentTab(tab.label)} key={tab.label} className={`cursor-pointer flex items-center px-3 py-1 
               text-sm rounded-md transition-colors ${currentTab === tab.label ? 'bg-white font-medium text-black'
                 : 'text-gray-500 hover:text-black'
               }`}>
