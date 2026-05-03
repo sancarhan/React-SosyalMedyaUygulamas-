@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { dummyConnectionsData } from '../assets/assets'
+import { Search } from 'lucide-react'
 
 const Discover = () => {
 
@@ -27,6 +28,19 @@ const Discover = () => {
           <p className="text-slate-600">
            Harika insanlarla bağlantı kurun, ağınızı genişletin.
           </p>
+        </div>
+        {/* Arama */}
+        <div className='mb-8 shadow-md rounded-md border border-slate-200/60
+        bg-white/80'>
+          <div className='p-6'>
+            <div className='relative'>
+              <Search className='absolute left-3 top-1/2 transform -translate-y-1/2
+              text-slate-400 w-5 h-5'/>
+              <input type="text" placeholder='İsim, kullanıcı adı, biyografi veya konuma göre kişileri arayın...'
+              className='pl-10 sm:pl-12 py-2 w-full border border-gray-300 rounded-md max-sm:text-sm'
+              onChange={(e)=>setInput(e.target.value)} value={input} onKeyUp={handleSearch}/>
+            </div>
+          </div>
         </div>
       </div>
     </div>
