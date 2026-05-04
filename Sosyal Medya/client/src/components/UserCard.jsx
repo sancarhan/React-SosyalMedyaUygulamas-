@@ -1,6 +1,6 @@
 import React from 'react'
 import { dummyUserData } from '../assets/assets'
-import { MapPin } from 'lucide-react'
+import { MapPin, UserPlus } from 'lucide-react'
 
 const UserCard = ({user}) => {
 
@@ -32,6 +32,16 @@ const UserCard = ({user}) => {
         rounded-full px-3 py-1'>
           <span>{user.followers.length}</span> Takipçi
         </div>
+      </div>
+
+      <div className='flex mt-4 gap-2'>
+        {/* Takip Et butonu */}
+        <button onClick={handleFollow} disabled={currentUser?.following.includes(user._id)} className='w-full py-2 rounded-md flex justify-center
+        items-center gap-2 bg-gradient-to-r from-indigo-500 to-blue-600
+        hover:from-blue-600 hover:to-purple-700 active:scale-95 transition text-white cursor-pointer'>
+          <UserPlus className='w-4 h-4'/>{currentUser?.following.includes(user._id) ? 'Takip Et' : 'Takipçi' }
+        </button>
+        {/* Bağlantı isteği düğmesi / mesaj düğmesi */}
       </div>
 
     </div>
