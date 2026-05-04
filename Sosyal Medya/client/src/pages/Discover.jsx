@@ -49,7 +49,9 @@ const Discover = () => {
             <UserCard user={user} key={user._id}/>
           ))}
         </div>
-
+        {
+          loading && (<loading height='60vh'/>)
+        }
       </div>
     </div>
   )
