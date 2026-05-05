@@ -33,7 +33,7 @@ const UserCard = ({user}) => {
           <span>{user.followers.length}</span> Takipçi
         </div>
       </div>
-      <div></div>
+      
 
       <div className='flex mt-4 gap-2'>
         {/* Takip Et butonu */}
