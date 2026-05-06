@@ -1,6 +1,6 @@
 import React from 'react'
 import { dummyUserData } from '../assets/assets'
-import { MapPin, UserPlus } from 'lucide-react'
+import { MapPin, MessageCircle, Plus, UserPlus } from 'lucide-react'
 
 const UserCard = ({user}) => {
 
@@ -43,6 +43,14 @@ const UserCard = ({user}) => {
           <UserPlus className='w-4 h-4'/>{currentUser?.following.includes(user._id) ? 'Takip Et' : 'Takipçi' }
         </button>
         {/* Bağlantı isteği düğmesi / mesaj düğmesi */}
+        <button>
+          {
+            currentUser?.connections.includes(user.id) ? 
+            <MessageCircle className='w-5 h-5 group-hover:scale-105 transition'/>
+            :
+            <Plus className='w-5 h-5 group-hover:scale-105 transition'/>
+          }
+        </button>
       </div>
 
     </div>
