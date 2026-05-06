@@ -21,8 +21,10 @@ const Profile = () => {
   },[])
 
   return user ?  (
-    <div>
-      
+    <div className='relative h-full overflow-y-scroll bg-gray-50 p-6'>
+      <div className='max-w-3xl mx-auto'>
+        
+      </div>
     </div>
   ) : (<Loading />)
 }
