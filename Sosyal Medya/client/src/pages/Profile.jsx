@@ -1,5 +1,7 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom";
+import { dummyPostsData, dummyUserData } from '../assets/assets';
+import Loading from '../components/Loading';
 
 const Profile = () => {
 
@@ -9,11 +11,20 @@ const Profile = () => {
   const [activeTab, setActiveTab] = useState('posts')
   const [showEdit, setShowEdit] = useState('false')
 
-  return (
+  const fetchUser = async () => {
+    setUser(dummyUserData)
+    setPosts(dummyPostsData)
+  }
+
+  useEffect(()=>{
+    fetchUser()
+  },[])
+
+  return user ?  (
     <div>
       
     </div>
-  )
+  ) : (<Loading />)
 }
 
 export default Profile
