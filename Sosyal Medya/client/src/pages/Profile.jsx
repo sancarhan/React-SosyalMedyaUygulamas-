@@ -23,7 +23,7 @@ const Profile = () => {
   return user ?  (
     <div className='relative h-full overflow-y-scroll bg-gray-50 p-6'>
       <div className='max-w-3xl mx-auto'>
-        
+        {/* Profil Kart */}
       </div>
     </div>
   ) : (<Loading />)
