@@ -5,6 +5,7 @@
 
 # Cosnova - Sosyal Medya Uygulaması
 
+
 Cosnova, modern web teknolojileri kullanılarak geliştirilmiş bir sosyal medya platformudur. Kullanıcıların gönderi paylaşması, hikaye oluşturması, birbirleriyle mesajlaşması ve profillerini yönetmesi amaçlanmıştır. Proje, React 19 ve Vite altyapısı üzerine kurulmuş olup, Tailwind CSS ile şekillendirilmiştir.
 
 ---
