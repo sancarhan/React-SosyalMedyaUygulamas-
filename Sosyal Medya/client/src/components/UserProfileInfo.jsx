@@ -1,4 +1,4 @@
-import { MapPin, PenBox, Verified } from "lucide-react";
+import { Calendar, MapPin, PenBox, Verified } from "lucide-react";
 import React from "react";
 
 const UserProfileInfo = ({ user, posts, profileId, setShowEdit }) => {
@@ -45,9 +45,11 @@ const UserProfileInfo = ({ user, posts, profileId, setShowEdit }) => {
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-gray-500 mt-4">
            <span className="flex items-center gap-1.5">
             <MapPin className="w-4 h-4"/>
-            {
-              user.location ? user.location : 'Ass Location'
-            }
+            {user.location ? user.location : 'Ass Location'}
+           </span>
+           <span className="flex items-center gap-1.5">
+            <Calendar className="w-4 h-4"/>
+            {user.location ? user.location : 'Ass Location'}
            </span>
           </div>
 
