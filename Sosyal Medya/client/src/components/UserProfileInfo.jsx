@@ -1,7 +1,6 @@
 import React from "react";
 import { Calendar, MapPin, PenBox, Verified } from "lucide-react";
 import moment from 'moment';
-import 'moment/locale/tr'; // Import the Turkish locale file
 
 
 
@@ -55,8 +54,7 @@ const UserProfileInfo = ({ user, posts, profileId, setShowEdit }) => {
            </span>
            <span className="flex items-center gap-1.5">
             <Calendar className="w-4 h-4"/>
-            {user.location ? user.location : 'Ass Location'}
-            <span> {moment(user.createdAt).fromNow('tr')} </span> önce Katıldı
+            <span> {moment(user.createdAt).fromNow('tr')}</span>önce Katıldı
            </span>
           </div>
 
