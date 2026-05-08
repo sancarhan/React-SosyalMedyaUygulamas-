@@ -1,4 +1,4 @@
-import { PenBox, Verified } from "lucide-react";
+import { MapPin, PenBox, Verified } from "lucide-react";
 import React from "react";
 
 const UserProfileInfo = ({ user, posts, profileId, setShowEdit }) => {
@@ -42,8 +42,13 @@ const UserProfileInfo = ({ user, posts, profileId, setShowEdit }) => {
            {user.bio}
           </p>
 
-          <div>
-           
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-gray-500 mt-4">
+           <span className="flex items-center gap-1.5">
+            <MapPin className="w-4 h-4"/>
+            {
+              user.location ? user.location : 'Ass Location'
+            }
+           </span>
           </div>
 
         </div>
