@@ -38,7 +38,7 @@ const UserProfileInfo = ({ user, posts, profileId, setShowEdit }) => {
             {!profileId &&
              <button onClick={()=> setShowEdit(true)} className="flex items-center gap-2 border
              border-gray-300 hover:bg-gray-50 px-4 py-2 rounded-lg font-medium
-             transition-colors mt-4 md:mt-0">
+             transition-colors mt-4 md:mt-0 cursor-pointer">
                 <PenBox className="w-4 h-4"/>
                 Düzenle
               </button>}
@@ -57,7 +57,20 @@ const UserProfileInfo = ({ user, posts, profileId, setShowEdit }) => {
             <span> {moment(user.createdAt).fromNow('tr')}</span>önce Katıldı
            </span>
           </div>
-
+          <div className="flex items-center gap-6 mt-6 border-t border-gray-200 pt-4">
+            <div>
+              <span className="sm:text-xl font-bold text-gray-900"> {posts.length} </span>
+              <span className="text-xs sm:text-sm text-gray-500 ml-1.5"> Gönderi </span>
+            </div>
+            <div>
+              <span className="sm:text-xl font-bold text-gray-900"> {user.followers.length} </span>
+              <span className="text-xs sm:text-sm text-gray-500 ml-1.5"> Takipçi </span>
+            </div>
+            <div>
+              <span className="sm:text-xl font-bold text-gray-900"> {user.following.length} </span>
+              <span className="text-xs sm:text-sm text-gray-500 ml-1.5"> Takip Edilen </span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
