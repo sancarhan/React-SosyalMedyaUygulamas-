@@ -70,6 +70,9 @@ const UserProfileInfo = ({ user, posts, profileId, setShowEdit }) => {
               <span className="sm:text-xl font-bold text-gray-900"> {user.following.length} </span>
               <span className="text-xs sm:text-sm text-gray-500 ml-1.5"> Takip Edilen </span>
             </div>
+            <div>
+              
+            </div>
           </div>
         </div>
       </div>
