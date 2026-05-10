@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { dummyPostsData, dummyUserData } from "../assets/assets";
 import Loading from "../components/Loading";
 import UserProfileInfo from "../components/UserProfileInfo";
+import PostCard from "../components/PostCard";
 
 const Profile = () => {
   const { profileId } = useParams();
@@ -47,6 +48,12 @@ const Profile = () => {
                   </button>
             ))}
           </div>
+          {/* Gönderiler */}
+          {activeTab === 'posts' && (
+            <div>
+              {posts.map((post)=> <PostCard key={post._id} post={post}/>)}
+            </div>
+          )}
         </div>
       </div>
     </div>
