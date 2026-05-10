@@ -2,6 +2,7 @@ import logo from './logo.svg'
 import logoimg from './logoimg.png'
 import sample_cover from './sample_cover.jpg'
 import sample_profile from './sample_profile.jpg'
+import profilfoto from './130090457.png'
 import bgImage from './bgImage.png'
 import group_users from './group_users.png'
 import { Home, MessageCircle, Search, UserIcon, Users } from 'lucide-react'
@@ -12,6 +13,7 @@ export const assets = {
     logoimg,
     sample_cover,
     sample_profile,
+    profilfoto,
     bgImage,
     group_users,
     sponsored_img
@@ -31,7 +33,7 @@ export const dummyUserData = {
     "full_name": "Oğuzhan SANCAR",
     "username": "sancarhanyazilim",
     "bio": "🌍 Dreamer | 📚 Learner | 🚀 Doer\r\nExploring life one step at a time.\r\n✨ Staying curious. Creating with purpose.",
-    "profile_picture": sample_profile,
+    "profile_picture": profilfoto,
     "cover_photo": sample_cover,
     "location": "New York, NY",
     "followers": ["user_2", "user_3"],
