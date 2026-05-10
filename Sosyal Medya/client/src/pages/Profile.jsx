@@ -39,8 +39,8 @@ const Profile = () => {
         {/* Tablo */}
         <div className="mt-6">
           <div className="bg-white rounded-xl shadow p-1 flex max-w-md mx-auto">
-            {["posts","medya","beğeniler"].map((tab)=>(
-              <button key={tab} className={`flex-1 px-4 py-2 text-sm font-medium
+            {["posts","media","likes"].map((tab)=>(
+              <button onClick={()=> setActiveTab(tab)} key={tab} className={`flex-1 px-4 py-2 text-sm font-medium
                 rounded-lg transition-colors cursor-pointer ${activeTab === tab ? 
                   "bg-blue-600 text-white" : "text-gray-600 hover:text-gray-900"}`}>
                     {tab.charAt(0).toUpperCase() + tab.slice(1)}
