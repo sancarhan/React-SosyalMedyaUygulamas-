@@ -79,7 +79,7 @@ const Profile = () => {
       </div>
       {/* Profil düzenlemesi */}
       {showEdit && <p>Profil düzenlemesini göster</p> }
-      <div></div>
+      
     </div>
    
   ) : (
