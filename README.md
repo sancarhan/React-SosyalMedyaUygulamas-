@@ -166,9 +166,9 @@ http://localhost:5173
 - [x] Mesajlar sayfası (bağlantı listesi)
 - [x] Bağlantılar (takip istekleri) sayfası 
 - [x] Keşfet sayfası
-- [ ] Profil sayfası - geliştiriliyor
+- [x] Profil sayfası
+- [x] Gönderi oluşturma sayfası
 - [ ] ChatBox (sohbet ekranı) - geliştiriliyor
-- [ ] Gönderi oluşturma sayfası - geliştiriliyor
 - [ ] Backend entegrasyonu (şu an sahte veriler kullanılıyor)
 
 ---
