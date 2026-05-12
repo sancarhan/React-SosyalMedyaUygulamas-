@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { dummyUserData } from '../assets/assets'
+import { X } from 'lucide-react'
 
 const CreatePost = () => {
 
@@ -28,6 +29,27 @@ const CreatePost = () => {
               <p className='text-sm text-gray-500'>@{user.username}</p>
             </div>
           </div>
+
+          {/* yazı alanı */}
+          <textarea placeholder="Neler oluyor?"
+          onChange={(e)=>setContent(e.target.value)} value={content}
+           className='w-full resize-none max-h-20 mt-4 text-sm outline-none placeholder-gray-400' />
+           {/* Resim */}
+           {
+            images.length > 0 && <div className='flex flex-wrap gap-2 mt-4'>
+              {images.map((image, i)=>(
+                <div key={i} className='relative group'>
+                  <img src={URL.createObjectURL(image)} className='h-20 rounded-md' alt="" />
+                  <div 
+                  onClick={()=> setImages(images.filter((_, index)=> index !== i ))} 
+                  className='absolute hidden group-hover:flex justify-center
+                  items-center top-0 right-0 bottom-0 left-0 bg-black/40rounded-md cursor-pointer'>
+                    <X className='w-6 h-6 text-white'/>
+                  </div>
+                </div>
+              ))}
+            </div>
+           }
         </div>
       </div>
     </div>
