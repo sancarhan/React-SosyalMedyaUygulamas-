@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { dummyUserData } from '../assets/assets'
-import { X } from 'lucide-react'
+import { Image, X } from 'lucide-react'
 
 const CreatePost = () => {
 
@@ -50,6 +50,24 @@ const CreatePost = () => {
               ))}
             </div>
            }
+
+           {/* Buton ve Resim yükleme */}
+           <div className='flex items-center justify-between pt-3 border-t
+           border-gray-300'>
+            <label htmlFor="images" className='flex items-center gap-2 text-sm
+            text-gray-500 hover:text-gray-700 transition cursor-pointer'>
+              <Image className='size-6'/>
+            </label>
+            <input type="file" id="images" accept='image/*' hidden multiple
+             onChange={(e)=>setImages([...images, ...e.target.files])}/>
+
+             <button className='text-sm bg-gradient-to-r from-blue-500
+             to-purple-600 hover:from-blue-600 hover:to-purple-700
+             active:scale-95 transition text-white font-medium px-8 py-2
+             rounded-md cursor-pointer'>
+              Gönderiyi Yayınla
+             </button>
+           </div>
         </div>
       </div>
     </div>
