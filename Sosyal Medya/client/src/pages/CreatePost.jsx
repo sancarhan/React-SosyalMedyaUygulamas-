@@ -17,6 +17,18 @@ const CreatePost = () => {
           <h1 className='text-3xl font-bold text-slate-900 mb-2'>Gönderi Oluştur</h1>
           <p className='text-slate-600'>Düşüncelerinizi dünyayla paylaşın</p>
         </div>
+
+        {/* form */}
+        <div className='max-w-xl bg-white p-4 sm:p-8 sm:pb-3 rounded-xl shadow-md space-y-10'>
+          {/* başlık */}
+          <div className='flex items-center gap-3'>
+            <img src={user.profile_picture} className='w-12 h-12 rounded-full shadow' alt="" />
+            <div>
+              <h2 className='font-semibold'>{user.full_name}</h2>
+              <p className='text-sm text-gray-500'>@{user.username}</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )
