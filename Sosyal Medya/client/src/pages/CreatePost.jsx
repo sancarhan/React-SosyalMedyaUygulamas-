@@ -78,6 +78,9 @@ const CreatePost = () => {
              active:scale-95 transition text-white font-medium px-8 py-2
              rounded-md cursor-pointer'>
               Gönderiyi Yayınla
+              <div>
+                
+              </div>
              </button>
            </div>
         </div>
