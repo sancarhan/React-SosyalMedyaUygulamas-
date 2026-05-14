@@ -45,6 +45,8 @@ const ChatBox = () => {
               </div>
             ))
           }
+          <div ref={messagesEndRef} />
+          
         </div>
       </div>
     </div>
