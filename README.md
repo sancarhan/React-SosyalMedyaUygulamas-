@@ -168,8 +168,8 @@ http://localhost:5173
 - [x] Keşfet sayfası
 - [x] Profil sayfası
 - [x] Gönderi oluşturma sayfası
-- [ ] ChatBox (sohbet ekranı) - geliştiriliyor
-- [ ] Backend entegrasyonu (şu an sahte veriler kullanılıyor)
+- [x] ChatBox (sohbet ekranı)
+- [ ] Profil Düzenleme - Geliştiriliyor
 
 ---
 
