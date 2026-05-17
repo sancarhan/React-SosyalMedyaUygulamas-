@@ -169,7 +169,7 @@ http://localhost:5173
 - [x] Profil sayfası
 - [x] Gönderi oluşturma sayfası
 - [x] ChatBox (sohbet ekranı)
-- [ ] Profil Düzenleme - Geliştiriliyor
+- [x] Profil Düzenleme 
 
 ---
 
