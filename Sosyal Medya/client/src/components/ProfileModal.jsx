@@ -144,7 +144,7 @@ const ProfileModal = ({setShowEdit}) => {
 
             <div className="flex justify-end space-x-3 pt-6">
               <button onClick={()=> setShowEdit(false)} type="button" className="px-4 py-2 border border-gray-300 rounded-lg text-gray-700
-              hover:bg-gray-50 transition-colors">İptal</button>
+              hover:bg-gray-50 transition-colors cursor-pointer">İptal</button>
 
               <button type="submit" className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white
               rounded-lg hover:from-blue-600
